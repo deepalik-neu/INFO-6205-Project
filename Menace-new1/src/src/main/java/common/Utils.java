@@ -7,27 +7,12 @@ public class Utils {
 
 	public static final String NEW_LINE = System.getProperty("line.separator");
 
-
-
-    /**
-     * rotates the game
-     *
-     * 1 | 2 | 3
-     * ----------
-     * 4 | 5 | 6
-     * ----------
-     * 7 | 8 | 9
-     *
-     * into the game
-     *
-     * 7 | 4 | 1
-     * ----------
-     * 8 | 5 | 2
-     * ----------
-     * 9 | 6 | 3
-     */
-
-
+	/**
+	 * rotate
+	 * @param lines
+	 * @param columns
+	 * @param transformedBoard
+	 */
     public static void rotate(int lines, int columns, int[] transformedBoard){
     	if(lines != columns) {
     		throw new IllegalArgumentException("Cannot rotate a non square board");
@@ -54,24 +39,12 @@ public class Utils {
 
     }
 
-    /**
-     * horizontalFlip flips the game
-     *
-     * 1 | 2 | 3
-     * ----------
-     * 4 | 5 | 6
-     * ----------
-     * 7 | 8 | 9
-     *
-     * into the game
-     *
-     * 7 | 8 | 9
-     * ----------
-     * 4 | 5 | 6
-     * ----------
-     * 1 | 2 | 3
-     */
-
+	/**
+	 * horizontal Flip
+	 * @param lines
+	 * @param columns
+	 * @param transformedBoard
+	 */
     public static  void horizontalFlip(int lines, int columns, int[] transformedBoard){
     	if(transformedBoard == null) {
     		throw new NullPointerException("transformedBoard cannot be null");
@@ -89,24 +62,12 @@ public class Utils {
     	}
     }
 
-   /**
-     * verticalFlip flips the game
-     *
-     * 1 | 2 | 3
-     * ----------
-     * 4 | 5 | 6
-     * ----------
-     * 7 | 8 | 9
-     *
-     * into the game
-     *
-     * 3 | 2 | 1
-     * ----------
-     * 6 | 5 | 4
-     * ----------
-     * 9 | 8 | 7
-     */
-
+	/**
+	 * vertical Flip
+	 * @param lines
+	 * @param columns
+	 * @param transformedBoard
+	 */
     public static  void verticalFlip(int lines, int columns, int[] transformedBoard){
     	if(transformedBoard == null) {
     		throw new NullPointerException("transformedBoard cannot be null");
@@ -125,7 +86,13 @@ public class Utils {
     }
 
 	//This is a simple method to test the function of HF, VF, and Rotate on various sizes of board and print the results into the console
-    private static void test(int lines, int columns){
+
+	/**
+	 * test the flips
+	 * @param lines
+	 * @param columns
+	 */
+	private static void test(int lines, int columns){
     	int[] test;
     	test = new int[lines*columns];
     	for(int i = 0 ; i < test.length; i++){

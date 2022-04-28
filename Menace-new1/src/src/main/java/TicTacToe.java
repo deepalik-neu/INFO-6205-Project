@@ -61,12 +61,12 @@ public class TicTacToe {
     public static void main(String[] args) {
 
        // To play again the menace
-        ComputerRandomPlayer random = new ComputerRandomPlayer();
+        RandomPPlayer random = new RandomPPlayer();
        //human manual play
         HumanPlayer human = new HumanPlayer();
 
         Player[] players = new Player[2];
-        players[0] = new ComputerMenacePlayer();
+        players[0] = new MenacePlayer();
         boolean stop = false;
 
         while(!stop) {

@@ -12,7 +12,7 @@ package Gameboards;
 
 import common.CellField;
 import common.GameState;
-import common.Transformation;
+import common.TransformBoard;
 import common.Utils;
 
 
@@ -61,24 +61,24 @@ public class TicTacToeGame {
 	 * can be found be iterating through the transformations
 	 * listed in allTransformations
 	 */
-	private  static final Transformation[] allTransformationsSquare =
-			{Transformation.ID,Transformation.ROT,Transformation.ROT,
-					Transformation.ROT,Transformation.HSYM,Transformation.ROT,
-					Transformation.ROT,Transformation.ROT};
+	private  static final TransformBoard[] allTransformationsSquare =
+			{TransformBoard.ID, TransformBoard.ROT, TransformBoard.ROT,
+					TransformBoard.ROT, TransformBoard.HSYM, TransformBoard.ROT,
+					TransformBoard.ROT, TransformBoard.ROT};
 
 	/**
 	 * the list of all possible symmetries of a nxm board
 	 * can be found be iterating through the transformations
 	 * listed in allTransformations
 	 */
-	private  static final Transformation[] allTransformationsNonSquare =
-			{Transformation.ID,Transformation.HSYM,
-					Transformation.VSYM,Transformation.HSYM};
+	private  static final TransformBoard[] allTransformationsNonSquare =
+			{TransformBoard.ID, TransformBoard.HSYM,
+					TransformBoard.VSYM, TransformBoard.HSYM};
 
 	/**
 	 * instance variable to record the transformations for that particular board
 	 */
-	private  Transformation[] allTransformations;
+	private  TransformBoard[] allTransformations;
 
 	/**
 	 * records how far we are in the list of transformations
@@ -516,7 +516,7 @@ public class TicTacToeGame {
 	 * Applies the transformation specified as parameter
 	 * to transformedBoard
 	 */
-	private void transform(Transformation type){
+	private void transform(TransformBoard type){
 
 		switch(type) {
 			case ID :

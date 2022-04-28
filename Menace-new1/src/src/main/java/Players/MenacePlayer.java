@@ -9,7 +9,7 @@ import common.GameState;
 import java.util.Hashtable;
 import java.util.LinkedList;
 
-public class ComputerMenacePlayer extends Player {
+public class MenacePlayer extends Player {
 
 	//To store various match boxes
 	Hashtable<Integer, String> ht1 = new Hashtable<Integer, String>();
@@ -33,7 +33,7 @@ public class ComputerMenacePlayer extends Player {
 	/**
 	 * computer menace player
 	 */
-	public ComputerMenacePlayer(){
+	public MenacePlayer(){
 		super();
 
 		// Build the list of all unique games up to symmetry.

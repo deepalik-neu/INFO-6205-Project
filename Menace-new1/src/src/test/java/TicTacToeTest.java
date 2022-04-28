@@ -1,10 +1,9 @@
 import Gameboards.MenaceTicTacToeGame;
 import Gameboards.TicTacToeGame;
-import Players.ComputerMenacePlayer;
-import Players.ComputerRandomPlayer;
+import Players.MenacePlayer;
+import Players.RandomPPlayer;
 import Players.HumanPlayer;
 import Players.Player;
-import common.GameState;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 class TicTacToeTest {
@@ -27,8 +26,8 @@ class TicTacToeTest {
     {
         TicTacToe game = new TicTacToe();
         Player[] players = new Player[2];
-        players[0] = new ComputerMenacePlayer();
-        players[1] =new ComputerRandomPlayer();
+        players[0] = new MenacePlayer();
+        players[1] =new RandomPPlayer();
         assertTrue(game.train(players));
     }
     /**
@@ -39,8 +38,8 @@ class TicTacToeTest {
     {
         TicTacToe game = new TicTacToe();
         Player[] players = new Player[2];
-        players[0] = new ComputerMenacePlayer();
-        players[1] =new ComputerRandomPlayer();
+        players[0] = new MenacePlayer();
+        players[1] =new RandomPPlayer();
         assertNotNull(game.train(players));
     }
 
@@ -53,8 +52,8 @@ class TicTacToeTest {
         TicTacToeGame game = new TicTacToeGame();
         Player[] players = new Player[2];
        HumanPlayer p=new HumanPlayer();
-        players[0] = new ComputerMenacePlayer();
-        players[1] =new ComputerRandomPlayer();
+        players[0] = new MenacePlayer();
+        players[1] =new RandomPPlayer();
         assertNotNull(players);
     }
 
@@ -65,8 +64,8 @@ class TicTacToeTest {
     void compMenaceTest(){
         MenaceTicTacToeGame m = new MenaceTicTacToeGame();
         Player[] players = new Player[2];
-        players[0] = new ComputerMenacePlayer();
-        players[1] =new ComputerRandomPlayer();
+        players[0] = new MenacePlayer();
+        players[1] =new RandomPPlayer();
         assertNotNull(m);
     }
 

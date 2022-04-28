@@ -2,7 +2,7 @@ package Players;
 import common.*;
 import Gameboards.TicTacToeGame;
 
-public class ComputerRandomPlayer extends Player {
+public class RandomPPlayer extends Player {
 
 	/**
 	 * play with computer random player

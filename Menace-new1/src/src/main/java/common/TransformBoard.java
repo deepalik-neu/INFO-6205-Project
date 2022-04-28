@@ -6,7 +6,7 @@
  * @author Guy-Vincent Jourdan, University of Ottawa
  */
 package common;
-public enum Transformation {
+public enum TransformBoard {
 	ID,
 	ROT,
 	VSYM,
